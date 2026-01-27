@@ -42,9 +42,9 @@ export default function AppSection() {
             </div>
 
             {/* Right Side - Text */}
-            <div className="text-left  py-2">
+            <div className="md:text-left text-center py-2">
               {/* Holding Phone Image */}
-              <div className="mb-2">
+              <div className="mb-2 flex justify-center md:justify-start">
                 <Image
                   src={holdingPhone}
                   alt="Holding Phone"
@@ -52,18 +52,18 @@ export default function AppSection() {
                 />
               </div>
 
-              <h3 className="text-5xl font-ultrabold text-black mb-10">
+              <h3 className="text-4xl md:text-5xl font-ultrabold text-black mb-10">
               THE APP <br />FEATURES             
               </h3>
-              <p className="text-lg text-zinc-700 leading-relaxed">
-            
-                    <div className="space-y-6">
-                <p className="text-2xl text-zinc-700">scroll and explore food videos</p>
-                <p className="text-2xl text-zinc-700">compare prices of couriers</p>
-                <p className="text-2xl text-zinc-700">order home or dine out</p>
-                <p className="text-2xl text-zinc-700">enjoy the delicious meal and rate it</p>
+
+             <div className="flex justify-center md:justify-start">
+              <div className="max-w-md text-left space-y-6 text-lg text-zinc-700 leading-relaxed">
+                <p className="text-lg md:text-2xl text-zinc-700">- scroll and explore food videos</p>
+                <p className=" text-lg md:text-2xl text-zinc-700">- compare prices of couriers</p>
+                <p className="text-lg md:text-2xl text-zinc-700">- order home or dine out</p>
+                <p className="text-lg md:text-2xl text-zinc-700">- enjoy the delicious meal and rate it</p>
               </div>
-              </p>
+              </div>
             </div>
           </div>
         </div>
