@@ -8,7 +8,7 @@ export default function ComingSoon() {
         <Image
           src={comingSoon}
           alt="Coming Soon"
-          className="w-[800px] h-auto"
+          className="w-[350px] md:w-[800px] h-auto"
         />
       </div>
     </section>

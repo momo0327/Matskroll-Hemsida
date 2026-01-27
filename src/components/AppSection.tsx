@@ -28,7 +28,7 @@ export default function AppSection() {
                   loop
                   muted
                   playsInline
-                  className="absolute top-[2.5%] left-[2%] w-[96%] h-[97%] object-contain rounded-[50px]"
+                  className="absolute top-[2.5%] left-[2%] w-[96%] h-[97%] object-contain rounded-[30px] md:rounded-[40px]"
                 >
                   <source src="/assets/Videos/test.mp4" type="video/mp4" />
                 </video>
