@@ -19,7 +19,7 @@ export default function Footer() {
         >
           {/* Contact Section */}
           <div>
-            <h3 className="text-2xl font-bold text-cream mb-6">Contact</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-cream mb-6">Contact</h3>
             <div className="flex flex-col gap-4 text-cream">
               {/* Email */}
               <div className="flex items-center gap-3">
@@ -40,7 +40,7 @@ export default function Footer() {
                   href="mailto:info@matskroll.com"
                   className="hover:text-cream/80 transition-colors"
                 >
-                  mohamedsafe0427@gmail.com
+                  hello@zenitdigital.se
                 </a>
               </div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
 
           {/* Join Waitlist Section */}
           <div>
-            <h3 className="text-2xl font-bold text-cream mb-6">Waitlist</h3>
+            <h3 className="text-xl md:text-2xl font-bold text-cream mb-6">Waitlist</h3>
             <Link
               href="/waitlist"
               className="flex items-center gap-2 text-cream hover:text-cream/80 transition-colors group"

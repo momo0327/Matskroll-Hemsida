@@ -43,10 +43,10 @@ export default function Hero() {
             {/* CTA Button */}
             <div>
               <Link
-                href="/waitlist"
+                href="#app-section"
                 className="inline-flex items-center justify-center px-8 py-3 md:px-10 md:py-4 bg-violet text-white rounded-full hover:bg-violet/90 transition-colors font-semibold text-base md:text-lg"
               >
-                Join Waitlist
+                Explore
               </Link>
             </div>
           </div>

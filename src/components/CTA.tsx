@@ -16,7 +16,7 @@ export default function CTA() {
         >
           <h2
             className="
-              text-3xl sm:text-4xl md:text-6xl
+              text-2xl md:text-6xl
               font-black text-cream
               mb-12 md:mb-24
             "
@@ -34,7 +34,7 @@ export default function CTA() {
                 md:px-8 md:py-4
                 bg-cream text-violet
                 rounded-full
-                hover:bg-violet/90
+                hover:bg-gray-200/90
                 transition-colors
                 font-semibold
                 text-sm md:text-md

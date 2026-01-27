@@ -11,21 +11,21 @@ export default function Features() {
       image: lovePhone,
       alt: "Love Phone",
       title: "Discover food through mesmerising videos",
-      description: "Crafting solutions that uplift lives across MENA",
+      description: "Doom scroll and find your next favorite dish",
       maxHeight: 100,
     },
     {
       image: share,
       alt: "Share",
       title: "Share with people you love",
-      description: "Crafting solutions that uplift lives across MENA",
+      description: "Share your food adventures with friends and family",
       maxHeight: 170,
     },
     {
       image: star,
       alt: "Star",
       title: "Rate and see what people recommend",
-      description: "Crafting solutions that uplift lives across MENA",
+      description: "Find the best dishes based on community ratings",
       maxHeight: 120,
     },
   ];
@@ -56,7 +56,7 @@ export default function Features() {
           {features.map((feature, index) => (
             <div key={index} className="text-left">
               {/* Icon */}
-              <div className="mb-6 h-[170px] flex items-center">
+              <div className="mb-6 h-[180px] flex items-center">
                 <Image
                   src={feature.image}
                   alt={feature.alt}
@@ -66,12 +66,12 @@ export default function Features() {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-black mb-3">
+              <h3 className="text-2xl md:text-2xl font-bold text-black mb-3">
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className="text-zinc-600 text-sm leading-relaxed">
+              <p className="text-zinc-600 text-lg w-3/4 md:w-2/3 leading-relaxed">
                 {feature.description}
               </p>
             </div>
