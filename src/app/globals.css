@@ -6,6 +6,7 @@
   --scarlett-red: #EA2327;
   --cream: #FFFBF0;
   --violet: #3D1518;
+  --dark-gray: #181818;
 }
 
 @theme inline {
@@ -14,6 +15,7 @@
   --color-scarlett-red: var(--scarlett-red);
   --color-cream: var(--cream);
   --color-violet: var(--violet);
+  --color-dark-gray: var(--dark-gray);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-bagel: var(--font-bagel-fat-one);

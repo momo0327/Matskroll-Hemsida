@@ -13,9 +13,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Features />
+      <Partner />
       <AppSection />
       <ComingSoon />
-      {/* <Partner /> */}
       <CTA />
       <Footer />
     </div>

@@ -17,7 +17,7 @@ export default function Features() {
     {
       image: share,
       alt: "Share",
-      title: "Share with people you love",
+      title: "Share food you love, with people you love",
       description: "Share your food adventures with friends and family",
       maxHeight: 170,
     },
@@ -37,7 +37,7 @@ export default function Features() {
 
         {/* Section Header - Title on the left */}
         <div className="mb-16">
-          <h2 className="text-4xl sm:text-5xl font-black text-violet mb-12">
+          <h2 className="text-4xl sm:text-5xl font-black text-violet mb-12 uppercase">
             New{" "}
             <span className="relative inline-block">
               Adventures

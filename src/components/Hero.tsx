@@ -16,7 +16,7 @@ export default function Hero() {
               className="text-7xl md:text-8xl text-cream mb-6 md:w-max tracking-tight uppercase leading-none"
               style={{ fontFamily: 'var(--font-novecento-ultrabold)' }}
             >
-              App for <br className="md:hidden" /> new 
+              Discover <br className="md:hidden" /> new 
               <br className="hidden md:block" />
                {' '}food{' '}
               <span
@@ -40,8 +40,8 @@ export default function Hero() {
               Scroll and find new restaurants nearby, found one? Order directly in the app!
             </p>
 
-            {/* CTA Button */}
-            <div>
+            {/* CTA Buttons */}
+            <div className="flex gap-4">
               <Link
                 href="#app-section"
                 className="inline-flex items-center justify-center px-8 py-3 md:px-10 md:py-4 bg-violet text-white rounded-full hover:bg-violet/90 transition-colors font-semibold text-base md:text-lg"
