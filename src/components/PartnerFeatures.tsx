@@ -33,7 +33,7 @@ export default function PartnerFeatures() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header - Title centered */}
         <div className="mb-16 text-left md:text-center">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-ultrabold text-[#3D1518] mb-12 uppercase">
+          <h2 className="text-5xl md:text-6xl font-ultrabold text-[#3D1518] mb-12 uppercase">
             How It  <span className="text-scarlett-red">Works</span>
           </h2>
         </div>
