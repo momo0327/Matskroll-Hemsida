@@ -130,41 +130,39 @@ export default function PartnerHero() {
 
       {/* Registration Form - Mobile Only (Below Image) */}
       <section className="md:hidden bg-[#FFFBF0] py-8 px-4">
-        <div className="max-w-md mx-auto">
-          <div className="bg-[#FFFBF0] rounded-2xl shadow-xl p-8 border border-zinc-300">
+        <div className="max-w-md mx-auto -mt-18 relative z-10">
+          <div className="bg-white rounded-2xl shadow-xl p-8 border border-zinc-300">
             <h2 className="text-3xl font-bold text-violet mb-6 text-center">
               Register here
             </h2>
 
             <form className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="firstNameMobile" className="block text-sm font-semibold text-zinc-700 mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="firstNameMobile"
-                    name="firstName"
-                    className="w-full px-4 py-3 border border-zinc-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet focus:border-transparent text-black"
-                    placeholder="Name"
-                    required
-                  />
-                </div>
+              <div>
+                <label htmlFor="firstNameMobile" className="block text-sm font-semibold text-zinc-700 mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="firstNameMobile"
+                  name="firstName"
+                  className="w-full px-4 py-3 border border-zinc-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet focus:border-transparent text-black"
+                  placeholder="Name"
+                  required
+                />
+              </div>
 
-                <div>
-                  <label htmlFor="lastNameMobile" className="block text-sm font-semibold text-zinc-700 mb-2">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    id="lastNameMobile"
-                    name="lastName"
-                    className="w-full px-4 py-3 border border-zinc-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet focus:border-transparent text-black"
-                    placeholder="Last name"
-                    required
-                  />
-                </div>
+              <div>
+                <label htmlFor="lastNameMobile" className="block text-sm font-semibold text-zinc-700 mb-2">
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  id="lastNameMobile"
+                  name="lastName"
+                  className="w-full px-4 py-3 border border-zinc-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet focus:border-transparent text-black"
+                  placeholder="Last name"
+                  required
+                />
               </div>
 
               <div>
