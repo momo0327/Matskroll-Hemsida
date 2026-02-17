@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 interface NavbarProps {
   variant?: 'default' | 'partner';
@@ -10,6 +11,12 @@ interface NavbarProps {
 export default function Navbar({ variant = 'default' }: NavbarProps) {
   const isPartner = variant === 'partner';
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Close menu when pathname changes (after navigation completes)
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
 
   return (
     <>
@@ -118,27 +125,27 @@ export default function Navbar({ variant = 'default' }: NavbarProps) {
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <nav className="flex flex-col items-center gap-6">
+        <nav className="flex flex-col items-center gap-2">
           <Link
             href="/"
-            onClick={() => setMenuOpen(false)}
-            className="text-6xl font-ultrabold text-violet uppercase"
+            className="font-ultrabold text-violet uppercase"
+            style={{ fontSize: 50 }}
           >
             Home
           </Link>
           <Link
             href="/partner"
-            onClick={() => setMenuOpen(false)}
-            className="text-6xl font-ultrabold text-violet uppercase"
+            className="font-ultrabold text-violet uppercase"
+            style={{ fontSize: 50 }}
           >
             Partner
           </Link>
           <Link
             href="/waitlist"
-            onClick={() => setMenuOpen(false)}
-            className="text-6xl font-ultrabold text-violet uppercase"
+            className="font-ultrabold text-violet uppercase"
+            style={{ fontSize: 50 }}
           >
-            Join Waitlist
+          Waitlist
           </Link>
         </nav>
       </div>

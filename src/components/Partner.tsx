@@ -3,7 +3,7 @@ import partner from "@/app/assets/images/partner.png";
 
 export default function Partner() {
   return (
-    <section className="py-32 px-4 sm:px-6 lg:px-8 bg-[#181818]">
+    <section className="pt-32 px-4 sm:px-6 lg:px-8 bg-[#181818]">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-7xl  md:text-9xl font-ultrabold text-white mb-6 uppercase">
           Become a <br /> Partner
@@ -16,11 +16,11 @@ export default function Partner() {
         <button className="bg-scarlett-red text-[#FFFBF0] px-12 py-4 text-xl font-ultrabold uppercase hover:bg-opacity-90 rounded-full transition-all duration-300 mb-12">
           Explore
         </button>
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center items-end mt-12">
           <Image
             src={partner}
             alt="Partner"
-            className="w-full max-w-4xl h-auto"
+            className="w-full max-w-3xl h-auto"
           />
         </div>
       </div>

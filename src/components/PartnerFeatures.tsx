@@ -54,7 +54,7 @@ export default function PartnerFeatures() {
 
               <div className="max-w-xs md:max-w-[250px]">
                 {/* Title */}
-                <h3 className="text-lg md:text-xl font-bold text-[#3D1518] mb-3 text-left md:text-center">
+                <h3 className="text-lg md:text-xl font-bold text-black mb-3 text-left md:text-center">
                   {feature.title}
                 </h3>
 
