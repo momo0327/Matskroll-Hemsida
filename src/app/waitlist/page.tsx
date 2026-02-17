@@ -3,6 +3,8 @@
 import Link from "next/link";
 import HighlightImage from "@/app/assets/images/highlight.png";
 import { useState } from "react";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 export default function Waitlist() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -14,18 +16,19 @@ export default function Waitlist() {
 
   return (
     <div className="min-h-screen bg-scarlett-red">
+      <Navbar/>
       <div className="max-w-7xl mx-auto px-4 lg:px-8 min-h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full py-20">
           {/* Left Side - Text Content */}
           <div className="text-left">
-            <Link href="/" className="inline-block mb-8">
+            {/* <Link href="/" className="inline-block mb-8">
               <span className="text-xl font-bold text-cream hover:text-cream/80 transition-colors">
                 ← Back to Home
               </span>
-            </Link>
+            </Link> */}
 
             <h1
-              className="text-5xl md:text-9xl text-cream mb-6 tracking-tight uppercase leading-none"
+              className="text-7xl md:text-9xl text-cream mb-6 tracking-tight uppercase leading-none"
               style={{ fontFamily: 'var(--font-novecento-ultrabold)' }}
             >
               Join the
@@ -136,6 +139,8 @@ export default function Waitlist() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
+    
   );
 }
