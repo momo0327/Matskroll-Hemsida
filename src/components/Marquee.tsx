@@ -21,8 +21,8 @@ export default function Marquee({
 }: MarqueeProps) {
   const [offset, setOffset] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const requestRef = useRef<number>();
-  const previousTimeRef = useRef<number>();
+  const requestRef = useRef<number>(0);
+  const previousTimeRef = useRef<number>(0);
   const uniqueId = useId();
 
   // SVG dimensions
