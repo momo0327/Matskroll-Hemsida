@@ -22,7 +22,7 @@ export default function CTA() {
             "
             style={{ fontFamily: "var(--font-novecento-ultrabold)" }}
           >
-            BRIDGING THE GAP BETWEEN <br /> FOOD AND DISCOVERY
+            SIGN UP FOR <br /> THE WAITLIST
           </h2>
 
           <div className="relative inline-block">

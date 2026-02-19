@@ -1,5 +1,6 @@
 import Image from "next/image";
 import partner from "@/app/assets/images/partner.png";
+import Marquee from "@/components/Marquee";
 
 export default function Partner() {
   return (
@@ -16,6 +17,16 @@ export default function Partner() {
         <button className="bg-scarlett-red text-[#FFFBF0] px-12 py-4 text-xl font-ultrabold uppercase hover:bg-opacity-90 rounded-full transition-all duration-300 mb-12">
           Explore
         </button>
+
+        {/* <Marquee
+          text="TOO GOOD FOR NAPKINS"
+          fontSize={10}
+          waveFrequency={4}
+          waveAmplitude={40}
+          speed={1.5}
+          className="text-white font-ultrabold uppercase my-16"
+        /> */}
+
         <div className="flex justify-center items-end mt-12">
           <Image
             src={partner}
