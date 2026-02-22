@@ -5,11 +5,12 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 interface NavbarProps {
-  variant?: 'default' | 'partner';
+  variant?: 'default' | 'partner' | 'dark';
 }
 
 export default function Navbar({ variant = 'default' }: NavbarProps) {
   const isPartner = variant === 'partner';
+  const isDark = variant === 'dark';
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
@@ -21,7 +22,7 @@ export default function Navbar({ variant = 'default' }: NavbarProps) {
   return (
     <>
       <nav className={`relative z-50 transition-colors duration-300 ${
-        menuOpen ? 'bg-[#FFFBF0]' : isPartner ? 'bg-white' : 'bg-scarlett-red'
+        menuOpen ? 'bg-[#FFFBF0]' : isDark ? 'bg-[#181818]' : isPartner ? 'bg-white' : 'bg-scarlett-red'
       }`}>
         <div className="max-w-7xl mx-auto px-4 py-3 md:px-8">
           <div className="flex items-center justify-between h-16">
@@ -29,11 +30,28 @@ export default function Navbar({ variant = 'default' }: NavbarProps) {
             <Link href="/" className="flex items-center space-x-2 relative z-50">
               <span
                 className={`text-2xl md:text-3xl uppercase transition-colors duration-300 ${
-                  menuOpen ? 'text-[#FFFBF0]' : isPartner ? 'text-[#FFFBF0]' : 'text-cream'
+                  menuOpen ? 'text-[#FFFBF0]' : isDark ? 'text-cream' : isPartner ? 'text-[#FFFBF0]' : 'text-cream'
                 }`}
                 style={{
                   fontFamily: 'var(--font-bagel-fat-one)',
-                  textShadow: isPartner ? `
+                  textShadow: isDark ? `
+                    -2px -2px 0 #EA2327,
+                    2px -2px 0 #EA2327,
+                    -2px 2px 0 #EA2327,
+                    2px 2px 0 #EA2327,
+                    -3px 0 0 #EA2327,
+                    3px 0 0 #EA2327,
+                    0 -3px 0 #EA2327,
+                    0 3px 0 #EA2327,
+                    -4px -4px 0 #EA2327,
+                    4px -4px 0 #EA2327,
+                    -4px 4px 0 #EA2327,
+                    4px 4px 0 #EA2327,
+                    -5px 0 0 #EA2327,
+                    5px 0 0 #EA2327,
+                    0 -5px 0 #EA2327,
+                    0 5px 0 #EA2327
+                  ` : isPartner ? `
                     -2px -2px 0 #3D1518,
                     2px -2px 0 #3D1518,
                     -2px 2px 0 #3D1518,
@@ -79,7 +97,9 @@ export default function Navbar({ variant = 'default' }: NavbarProps) {
               <Link
                 href="/partner"
                 className={`px-4 py-2 sm:px-6 sm:py-3 rounded-full transition-colors font-semibold text-sm sm:text-base whitespace-nowrap text-center min-w-[100px] sm:min-w-[140px] ${
-                  isPartner
+                  isDark
+                    ? 'bg-cream text-[#3D1518] hover:bg-cream/90'
+                    : isPartner
                     ? 'bg-cream text-[#3D1518] hover:bg-cream/90'
                     : 'bg-cream text-violet hover:bg-cream/90'
                 }`}
@@ -89,7 +109,9 @@ export default function Navbar({ variant = 'default' }: NavbarProps) {
               <Link
                 href="/waitlist"
                 className={`px-4 py-2 sm:px-6 sm:py-3 rounded-full transition-colors font-semibold text-sm sm:text-base whitespace-nowrap text-center min-w-[100px] sm:min-w-[140px] ${
-                  isPartner
+                  isDark
+                    ? 'bg-scarlett-red text-cream hover:bg-scarlett-red/90'
+                    : isPartner
                     ? 'bg-[#3D1518] text-cream hover:bg-[#3D1518]/90'
                     : 'bg-[#3D1518] text-cream hover:bg-[#3D1518]/90'
                 }`}
@@ -106,12 +128,12 @@ export default function Navbar({ variant = 'default' }: NavbarProps) {
             >
               <span
                 className={`block h-0.5 w-full transition-all duration-300 ${
-                  menuOpen ? 'bg-violet' : isPartner ? 'bg-[#3D1518]' : 'bg-cream'
+                  menuOpen ? 'bg-violet' : isDark ? 'bg-cream' : isPartner ? 'bg-[#3D1518]' : 'bg-cream'
                 } ${menuOpen ? 'rotate-45 translate-y-1.25' : ''}`}
               />
               <span
                 className={`block h-0.5 w-full transition-all duration-300 ${
-                  menuOpen ? 'bg-violet' : isPartner ? 'bg-[#3D1518]' : 'bg-cream'
+                  menuOpen ? 'bg-violet' : isDark ? 'bg-cream' : isPartner ? 'bg-[#3D1518]' : 'bg-cream'
                 } ${menuOpen ? '-rotate-45 -translate-y-1.25' : ''}`}
               />
             </button>

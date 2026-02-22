@@ -13,13 +13,13 @@ export default function Footer() {
             absolute
             top-24 left-4 right-4
             flex flex-col gap-12
-            md:top-40 md:left-8 md:right-auto
+            md:top-30 md:left-8 md:right-auto
             md:flex-row md:gap-20
           "
         >
-          {/* Contact Section */}
+          {/* General Inquiries Section */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold text-cream mb-6">Contact</h3>
+            <h3 className="text-xl md:text-3xl font-ultrabold text-cream mb-6 uppercase">General Inquiries</h3>
             <div className="flex flex-col gap-4 text-cream">
               {/* Email */}
               <div className="flex items-center gap-3">
@@ -37,7 +37,7 @@ export default function Footer() {
                   />
                 </svg>
                 <a
-                  href="mailto:info@matskroll.com"
+                  href="mailto:hello@zenitdigital.se"
                   className="hover:text-cream/80 transition-colors"
                 >
                   hello@zenitdigital.se
@@ -69,28 +69,35 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Join Waitlist Section */}
+          {/* Links Section */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold text-cream mb-6">Waitlist</h3>
-            <Link
-              href="/waitlist"
-              className="flex items-center gap-2 text-cream hover:text-cream/80 transition-colors group"
-            >
-              <span>Join Waitlist</span>
-              <svg
-                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+            <h3 className="text-xl md:text-3xl font-ultrabold text-cream mb-6 uppercase">Links</h3>
+            <div className="flex flex-col gap-3 text-cream">
+              <Link
+                href="/"
+                className="hover:text-cream/80 transition-colors"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Link>
+                Home
+              </Link>
+              <Link
+                href="/partner"
+                className="hover:text-cream/80 transition-colors"
+              >
+                Partner
+              </Link>
+              <Link
+                href="/waitlist"
+                className="hover:text-cream/80 transition-colors"
+              >
+                Waitlist
+              </Link>
+              <Link
+                href="/privacy-policy"
+                className="hover:text-cream/80 transition-colors"
+              >
+                Privacy Policy
+              </Link>
+            </div>
           </div>
         </div>
 
