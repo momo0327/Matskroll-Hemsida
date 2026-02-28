@@ -91,11 +91,23 @@ export default function Footer() {
               >
                 Waitlist
               </Link>
+            </div>
+          </div>
+               {/* service Section */}
+          <div>
+            <h3 className="text-xl md:text-3xl font-ultrabold text-cream mb-6 uppercase">SERVICE</h3>
+            <div className="flex flex-col gap-3 text-cream">
               <Link
                 href="/privacy-policy"
                 className="hover:text-cream/80 transition-colors"
               >
                 Privacy Policy
+              </Link>
+                 <Link
+                href="https://tally.so/r/xXd075"
+                className="hover:text-cream/80 transition-colors"
+              >
+                Support
               </Link>
             </div>
           </div>
