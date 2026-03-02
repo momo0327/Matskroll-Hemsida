@@ -4,6 +4,8 @@ import Features from "@/components/Features";
 import AppSection from "@/components/AppSection";
 import Partner from "@/components/Partner";
 import ComingSoon from "@/components/ComingSoon";
+import Testimonials from "@/components/Testimonials";
+import DualMarquee from "@/components/DualMarquee";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -16,6 +18,8 @@ export default function Home() {
       <Partner />
       <AppSection />
       <ComingSoon />
+      {/* <Testimonials /> */}
+      {/* <DualMarquee /> */}
       <CTA />
       <Footer />
     </div>

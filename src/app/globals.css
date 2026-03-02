@@ -34,3 +34,45 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--translate-x, 0)), calc(-50% + var(--translate-y, 0) + 100px)) rotate(var(--rotation, 0deg));
+  }
+  100% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--translate-x, 0)), calc(-50% + var(--translate-y, 0))) rotate(var(--rotation, 0deg));
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-33.333%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 20s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 20s linear infinite;
+}

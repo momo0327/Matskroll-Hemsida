@@ -3,28 +3,22 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer
-      className="py-32 px-4 sm:px-6 lg:px-8 relative min-h-[500px]"
+      className="py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
       style={{ backgroundColor: "#181818" }}
     >
-      <div className="max-w-7xl mx-auto h-full">
-        {/* Contact Info and Join Waitlist - desktop unchanged, mobile stacked */}
-        <div
-          className="
-            absolute
-            top-24 left-4 right-4
-            flex flex-col gap-12
-            md:top-30 md:left-8 md:right-auto
-            md:flex-row md:gap-20
-          "
-        >
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Contact Info and Links - Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16">
           {/* General Inquiries Section */}
           <div>
-            <h3 className="text-xl md:text-3xl font-ultrabold text-cream mb-6 uppercase">General Inquiries</h3>
-            <div className="flex flex-col gap-4 text-cream">
+            <h3 className="text-lg md:text-2xl lg:text-3xl font-ultrabold text-cream mb-4 md:mb-6 uppercase">
+              General Inquiries
+            </h3>
+            <div className="flex flex-col gap-3 md:gap-4 text-sm md:text-base text-cream">
               {/* Email */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 md:gap-3">
                 <svg
-                  className="w-6 h-6"
+                  className="w-5 h-5 md:w-6 md:h-6 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -38,16 +32,16 @@ export default function Footer() {
                 </svg>
                 <a
                   href="mailto:hello@zenitdigital.se"
-                  className="hover:text-cream/80 transition-colors"
+                  className="hover:text-cream/80 transition-colors break-all"
                 >
                   hello@zenitdigital.se
                 </a>
               </div>
 
               {/* Phone */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 md:gap-3">
                 <svg
-                  className="w-6 h-6"
+                  className="w-5 h-5 md:w-6 md:h-6 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -71,8 +65,10 @@ export default function Footer() {
 
           {/* Links Section */}
           <div>
-            <h3 className="text-xl md:text-3xl font-ultrabold text-cream mb-6 uppercase">Links</h3>
-            <div className="flex flex-col gap-3 text-cream">
+            <h3 className="text-lg md:text-2xl lg:text-3xl font-ultrabold text-cream mb-4 md:mb-6 uppercase">
+              Links
+            </h3>
+            <div className="flex flex-col gap-2 md:gap-3 text-sm md:text-base text-cream">
               <Link
                 href="/"
                 className="hover:text-cream/80 transition-colors"
@@ -93,17 +89,20 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-               {/* service Section */}
+
+          {/* Service Section */}
           <div>
-            <h3 className="text-xl md:text-3xl font-ultrabold text-cream mb-6 uppercase">SERVICE</h3>
-            <div className="flex flex-col gap-3 text-cream">
+            <h3 className="text-lg md:text-2xl lg:text-3xl font-ultrabold text-cream mb-4 md:mb-6 uppercase">
+              Service
+            </h3>
+            <div className="flex flex-col gap-2 md:gap-3 text-sm md:text-base text-cream">
               <Link
                 href="/privacy-policy"
                 className="hover:text-cream/80 transition-colors"
               >
                 Privacy Policy
               </Link>
-                 <Link
+              <Link
                 href="https://tally.so/r/xXd075"
                 className="hover:text-cream/80 transition-colors"
               >
@@ -113,29 +112,68 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright - mobile centered above logo, desktop unchanged */}
-        <div
-          className="
-            absolute bottom-32 left-1/2 -translate-x-1/2
-            text-cream/50 text-xs
-            md:bottom-16 md:right-8 md:left-auto md:translate-x-0
-            md:text-sm
-          "
-        >
-          © 2026 Matskroll. All rights reserved.
+        {/* Copyright */}
+        <div className="text-center lg:text-right text-cream/50 text-xs md:text-sm pb-12 md:pb-32">
+          {/* © 2026 Matskroll. All rights reserved. */}
         </div>
       </div>
 
-      {/* Logo - mobile centered, desktop bottom-left unchanged */}
-      <div
-        className="
-          absolute bottom-0 left-1/2 -translate-x-1/2
-          md:left-0 md:translate-x-0
-        "
-      >
-        <Link href="/" className="flex items-center space-x-2">
+      {/* Logo - Bottom Left Corner, Bottom Chopped Off */}
+      <div className="absolute -bottom-2 sm:-bottom-4 md:-bottom-6 lg:-bottom-8 left-0 pointer-events-none">
+        <Link href="/" className="pointer-events-auto">
+          {/* Mobile - Small stroke */}
           <span
-            className="text-7xl sm:text-6xl md:text-[10rem] text-cream uppercase leading-none"
+            className="block sm:hidden text-7xl text-cream uppercase leading-none"
+            style={{
+              fontFamily: "var(--font-bagel-fat-one)",
+              textShadow: `
+                -2px -2px 0 #EA2327,
+                2px -2px 0 #EA2327,
+                -2px 2px 0 #EA2327,
+                2px 2px 0 #EA2327,
+                -3px 0 0 #EA2327,
+                3px 0 0 #EA2327,
+                0 -3px 0 #EA2327,
+                0 3px 0 #EA2327,
+                -4px -4px 0 #EA2327,
+                4px -4px 0 #EA2327,
+                -4px 4px 0 #EA2327,
+                4px 4px 0 #EA2327
+              `,
+            }}
+          >
+            Matskroll
+          </span>
+          {/* Small - Medium stroke */}
+          <span
+            className="hidden sm:block md:hidden text-8xl text-cream uppercase leading-none"
+            style={{
+              fontFamily: "var(--font-bagel-fat-one)",
+              textShadow: `
+                -3px -3px 0 #EA2327,
+                3px -3px 0 #EA2327,
+                -3px 3px 0 #EA2327,
+                3px 3px 0 #EA2327,
+                -5px 0 0 #EA2327,
+                5px 0 0 #EA2327,
+                0 -5px 0 #EA2327,
+                0 5px 0 #EA2327,
+                -6px -6px 0 #EA2327,
+                6px -6px 0 #EA2327,
+                -6px 6px 0 #EA2327,
+                6px 6px 0 #EA2327,
+                -8px 0 0 #EA2327,
+                8px 0 0 #EA2327,
+                0 -8px 0 #EA2327,
+                0 8px 0 #EA2327
+              `,
+            }}
+          >
+            Matskroll
+          </span>
+          {/* Medium - Larger stroke */}
+          <span
+            className="hidden md:block lg:hidden text-9xl text-cream uppercase leading-none"
             style={{
               fontFamily: "var(--font-bagel-fat-one)",
               textShadow: `
@@ -155,6 +193,33 @@ export default function Footer() {
                 10px 0 0 #EA2327,
                 0 -10px 0 #EA2327,
                 0 10px 0 #EA2327
+              `,
+            }}
+          >
+            Matskroll
+          </span>
+          {/* Large - Full stroke */}
+          <span
+            className="hidden lg:block text-[10rem] xl:text-[12rem] text-cream uppercase leading-none"
+            style={{
+              fontFamily: "var(--font-bagel-fat-one)",
+              textShadow: `
+                -6px -6px 0 #EA2327,
+                6px -6px 0 #EA2327,
+                -6px 6px 0 #EA2327,
+                6px 6px 0 #EA2327,
+                -8px 0 0 #EA2327,
+                8px 0 0 #EA2327,
+                0 -8px 0 #EA2327,
+                0 8px 0 #EA2327,
+                -10px -10px 0 #EA2327,
+                10px -10px 0 #EA2327,
+                -10px 10px 0 #EA2327,
+                10px 10px 0 #EA2327,
+                -12px 0 0 #EA2327,
+                12px 0 0 #EA2327,
+                0 -12px 0 #EA2327,
+                0 12px 0 #EA2327
               `,
             }}
           >
