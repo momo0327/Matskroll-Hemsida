@@ -1,8 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import LogoDark from "@/app/assets/images/LogoDark.png";
+import LogoRed from "@/app/assets/images/LogoRed.png";
 
 interface NavbarProps {
   variant?: 'default' | 'partner' | 'dark';
@@ -30,69 +33,13 @@ export default function Navbar({ variant = 'default' }: NavbarProps) {
         {/* Logo and Close Button */}
         <div className="absolute top-0 left-0 right-0 px-4 py-3">
           <div className="max-w-7xl mx-auto flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <span
-                className={`text-2xl uppercase ${
-                  isDark ? 'text-cream' : isPartner ? 'text-[#FFFBF0]' : 'text-cream'
-                }`}
-                style={{
-                  fontFamily: 'var(--font-bagel-fat-one)',
-                  textShadow: isDark ? `
-                    -2px -2px 0 #EA2327,
-                    2px -2px 0 #EA2327,
-                    -2px 2px 0 #EA2327,
-                    2px 2px 0 #EA2327,
-                    -3px 0 0 #EA2327,
-                    3px 0 0 #EA2327,
-                    0 -3px 0 #EA2327,
-                    0 3px 0 #EA2327,
-                    -4px -4px 0 #EA2327,
-                    4px -4px 0 #EA2327,
-                    -4px 4px 0 #EA2327,
-                    4px 4px 0 #EA2327,
-                    -5px 0 0 #EA2327,
-                    5px 0 0 #EA2327,
-                    0 -5px 0 #EA2327,
-                    0 5px 0 #EA2327
-                  ` : isPartner ? `
-                    -2px -2px 0 #3D1518,
-                    2px -2px 0 #3D1518,
-                    -2px 2px 0 #3D1518,
-                    2px 2px 0 #3D1518,
-                    -3px 0 0 #3D1518,
-                    3px 0 0 #3D1518,
-                    0 -3px 0 #3D1518,
-                    0 3px 0 #3D1518,
-                    -4px -4px 0 #3D1518,
-                    4px -4px 0 #3D1518,
-                    -4px 4px 0 #3D1518,
-                    4px 4px 0 #3D1518,
-                    -5px 0 0 #3D1518,
-                    5px 0 0 #3D1518,
-                    0 -5px 0 #3D1518,
-                    0 5px 0 #3D1518
-                  ` : `
-                    -2px -2px 0 #3D1518,
-                    2px -2px 0 #3D1518,
-                    -2px 2px 0 #3D1518,
-                    2px 2px 0 #3D1518,
-                    -3px 0 0 #3D1518,
-                    3px 0 0 #3D1518,
-                    0 -3px 0 #3D1518,
-                    0 3px 0 #3D1518,
-                    -4px -4px 0 #3D1518,
-                    4px -4px 0 #3D1518,
-                    -4px 4px 0 #3D1518,
-                    4px 4px 0 #3D1518,
-                    -5px 0 0 #3D1518,
-                    5px 0 0 #3D1518,
-                    0 -5px 0 #3D1518,
-                    0 5px 0 #3D1518
-                  `
-                }}
-              >
-                Matskroll
-              </span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src={isDark ? LogoRed : LogoDark}
+                alt="Matskroll"
+                className="h-7 md:h-10 w-auto"
+                priority
+              />
             </Link>
 
             <button
@@ -160,69 +107,13 @@ export default function Navbar({ variant = 'default' }: NavbarProps) {
         <div className="max-w-7xl mx-auto px-4 py-3 md:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo - Left */}
-            <Link href="/" className="flex items-center space-x-2 relative">
-              <span
-                className={`text-2xl md:text-3xl uppercase ${
-                  isDark ? 'text-cream' : isPartner ? 'text-[#FFFBF0]' : 'text-cream'
-                }`}
-                style={{
-                  fontFamily: 'var(--font-bagel-fat-one)',
-                  textShadow: isDark ? `
-                    -2px -2px 0 #EA2327,
-                    2px -2px 0 #EA2327,
-                    -2px 2px 0 #EA2327,
-                    2px 2px 0 #EA2327,
-                    -3px 0 0 #EA2327,
-                    3px 0 0 #EA2327,
-                    0 -3px 0 #EA2327,
-                    0 3px 0 #EA2327,
-                    -4px -4px 0 #EA2327,
-                    4px -4px 0 #EA2327,
-                    -4px 4px 0 #EA2327,
-                    4px 4px 0 #EA2327,
-                    -5px 0 0 #EA2327,
-                    5px 0 0 #EA2327,
-                    0 -5px 0 #EA2327,
-                    0 5px 0 #EA2327
-                  ` : isPartner ? `
-                    -2px -2px 0 #3D1518,
-                    2px -2px 0 #3D1518,
-                    -2px 2px 0 #3D1518,
-                    2px 2px 0 #3D1518,
-                    -3px 0 0 #3D1518,
-                    3px 0 0 #3D1518,
-                    0 -3px 0 #3D1518,
-                    0 3px 0 #3D1518,
-                    -4px -4px 0 #3D1518,
-                    4px -4px 0 #3D1518,
-                    -4px 4px 0 #3D1518,
-                    4px 4px 0 #3D1518,
-                    -5px 0 0 #3D1518,
-                    5px 0 0 #3D1518,
-                    0 -5px 0 #3D1518,
-                    0 5px 0 #3D1518
-                  ` : `
-                    -2px -2px 0 #3D1518,
-                    2px -2px 0 #3D1518,
-                    -2px 2px 0 #3D1518,
-                    2px 2px 0 #3D1518,
-                    -3px 0 0 #3D1518,
-                    3px 0 0 #3D1518,
-                    0 -3px 0 #3D1518,
-                    0 3px 0 #3D1518,
-                    -4px -4px 0 #3D1518,
-                    4px -4px 0 #3D1518,
-                    -4px 4px 0 #3D1518,
-                    4px 4px 0 #3D1518,
-                    -5px 0 0 #3D1518,
-                    5px 0 0 #3D1518,
-                    0 -5px 0 #3D1518,
-                    0 5px 0 #3D1518
-                  `
-                }}
-              >
-                Matskroll
-              </span>
+            <Link href="/" className="flex items-center relative">
+              <Image
+                src={isDark ? LogoRed : LogoDark}
+                alt="Matskroll"
+                className="h-7 md:h-10 w-auto"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation Buttons */}

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import LogoRedFooter from "@/app/assets/images/LogoRedFooter.png";
 
 export default function Footer() {
   return (
@@ -118,113 +120,14 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Logo - Bottom Left Corner, Bottom Chopped Off */}
-      <div className="absolute -bottom-2 sm:-bottom-4 md:-bottom-6 lg:-bottom-8 left-0 pointer-events-none">
+      {/* Logo - Bottom Left Corner */}
+      <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 lg:-bottom-10 left-0 pointer-events-none">
         <Link href="/" className="pointer-events-auto">
-          {/* Mobile - Small stroke */}
-          <span
-            className="block sm:hidden text-7xl text-cream uppercase leading-none"
-            style={{
-              fontFamily: "var(--font-bagel-fat-one)",
-              textShadow: `
-                -2px -2px 0 #EA2327,
-                2px -2px 0 #EA2327,
-                -2px 2px 0 #EA2327,
-                2px 2px 0 #EA2327,
-                -3px 0 0 #EA2327,
-                3px 0 0 #EA2327,
-                0 -3px 0 #EA2327,
-                0 3px 0 #EA2327,
-                -4px -4px 0 #EA2327,
-                4px -4px 0 #EA2327,
-                -4px 4px 0 #EA2327,
-                4px 4px 0 #EA2327
-              `,
-            }}
-          >
-            Matskroll
-          </span>
-          {/* Small - Medium stroke */}
-          <span
-            className="hidden sm:block md:hidden text-8xl text-cream uppercase leading-none"
-            style={{
-              fontFamily: "var(--font-bagel-fat-one)",
-              textShadow: `
-                -3px -3px 0 #EA2327,
-                3px -3px 0 #EA2327,
-                -3px 3px 0 #EA2327,
-                3px 3px 0 #EA2327,
-                -5px 0 0 #EA2327,
-                5px 0 0 #EA2327,
-                0 -5px 0 #EA2327,
-                0 5px 0 #EA2327,
-                -6px -6px 0 #EA2327,
-                6px -6px 0 #EA2327,
-                -6px 6px 0 #EA2327,
-                6px 6px 0 #EA2327,
-                -8px 0 0 #EA2327,
-                8px 0 0 #EA2327,
-                0 -8px 0 #EA2327,
-                0 8px 0 #EA2327
-              `,
-            }}
-          >
-            Matskroll
-          </span>
-          {/* Medium - Larger stroke */}
-          <span
-            className="hidden md:block lg:hidden text-9xl text-cream uppercase leading-none"
-            style={{
-              fontFamily: "var(--font-bagel-fat-one)",
-              textShadow: `
-                -4px -4px 0 #EA2327,
-                4px -4px 0 #EA2327,
-                -4px 4px 0 #EA2327,
-                4px 4px 0 #EA2327,
-                -6px 0 0 #EA2327,
-                6px 0 0 #EA2327,
-                0 -6px 0 #EA2327,
-                0 6px 0 #EA2327,
-                -8px -8px 0 #EA2327,
-                8px -8px 0 #EA2327,
-                -8px 8px 0 #EA2327,
-                8px 8px 0 #EA2327,
-                -10px 0 0 #EA2327,
-                10px 0 0 #EA2327,
-                0 -10px 0 #EA2327,
-                0 10px 0 #EA2327
-              `,
-            }}
-          >
-            Matskroll
-          </span>
-          {/* Large - Full stroke */}
-          <span
-            className="hidden lg:block text-[10rem] xl:text-[12rem] text-cream uppercase leading-none"
-            style={{
-              fontFamily: "var(--font-bagel-fat-one)",
-              textShadow: `
-                -6px -6px 0 #EA2327,
-                6px -6px 0 #EA2327,
-                -6px 6px 0 #EA2327,
-                6px 6px 0 #EA2327,
-                -8px 0 0 #EA2327,
-                8px 0 0 #EA2327,
-                0 -8px 0 #EA2327,
-                0 8px 0 #EA2327,
-                -10px -10px 0 #EA2327,
-                10px -10px 0 #EA2327,
-                -10px 10px 0 #EA2327,
-                10px 10px 0 #EA2327,
-                -12px 0 0 #EA2327,
-                12px 0 0 #EA2327,
-                0 -12px 0 #EA2327,
-                0 12px 0 #EA2327
-              `,
-            }}
-          >
-            Matskroll
-          </span>
+          <Image
+            src={LogoRedFooter}
+            alt="Matskroll"
+            className="h-20 sm:h-24 md:h-32 lg:h-40 xl:h-48 w-auto"
+          />
         </Link>
       </div>
     </footer>
