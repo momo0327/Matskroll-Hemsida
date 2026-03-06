@@ -37,7 +37,7 @@ body {
 
 /* Windows OS specific scaling - make everything smaller */
 html.os-windows body {
-  zoom: 0.85; /* Zoom out to 85% - scales everything including images, icons, text, spacing */
+  zoom: 0.75; /* Zoom out to 75% - scales everything including images, icons, text, spacing */
 }
 
 @keyframes slide-up {
