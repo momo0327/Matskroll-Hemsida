@@ -4,8 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { Poppins } from "next/font/google";
 import LogoDark from "@/app/assets/images/LogoDark.png";
 import LogoRed from "@/app/assets/images/LogoRed.png";
+
+const poppins = Poppins({
+  weight: ['400', '500', '600'],
+  subsets: ['latin'],
+});
 
 interface NavbarProps {
   variant?: 'default' | 'partner' | 'dark';
@@ -104,7 +110,7 @@ export default function Navbar({ variant = 'default' }: NavbarProps) {
       <nav className={`relative z-50 transition-colors duration-300 ${
         isDark ? 'bg-[#181818]' : isPartner ? 'bg-white' : 'bg-scarlett-red'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 py-3 md:px-8">
+        <div className="max-w-7xl mx-auto px-4 py-3 md:px-1">
           <div className="flex items-center justify-between h-16">
             {/* Logo - Left */}
             <Link href="/" className="flex items-center relative">
@@ -115,6 +121,34 @@ export default function Navbar({ variant = 'default' }: NavbarProps) {
                 priority
               />
             </Link>
+
+            {/* Center Navigation Links - Desktop Only */}
+            <div className={`hidden md:flex gap-8 absolute left-1/2 transform -translate-x-1/2 ${poppins.className}`}>
+              <Link
+                href="/"
+                className={`text-base font-bol transition-colors ${
+                  isDark ? 'text-cream hover:text-cream/80' : isPartner ? 'text-[#3D1518] hover:text-[#3D1518]/80' : 'text-cream hover:text-cream/80'
+                }`}
+              >
+                Home
+              </Link>
+              <Link
+                href="/partner"
+                className={`text-base font-medium transition-colors ${
+                  isDark ? 'text-cream hover:text-cream/80' : isPartner ? 'text-[#3D1518] hover:text-[#3D1518]/80' : 'text-cream hover:text-cream/80'
+                }`}
+              >
+                Partner
+              </Link>
+              <Link
+                href="/waitlist"
+                className={`text-base font-medium transition-colors ${
+                  isDark ? 'text-cream hover:text-cream/80' : isPartner ? 'text-[#3D1518] hover:text-[#3D1518]/80' : 'text-cream hover:text-cream/80'
+                }`}
+              >
+                Waitlist
+              </Link>
+            </div>
 
             {/* Desktop Navigation Buttons */}
             <div className="hidden md:flex gap-2 sm:gap-4">
