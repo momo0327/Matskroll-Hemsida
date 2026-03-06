@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Bagel_Fat_One, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import OSDetector from "@/components/OSDetector";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -46,6 +47,7 @@ export default function RootLayout({
         className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable} ${bagelFatOne.variable} ${novecentoUltraBold.variable} antialiased`}
         style={{ fontFamily: 'var(--font-poppins)' }}
       >
+        <OSDetector />
         {children}
       </body>
     </html>
