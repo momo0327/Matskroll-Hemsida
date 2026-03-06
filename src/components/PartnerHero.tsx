@@ -16,7 +16,7 @@ export default function PartnerHero() {
         <div className="absolute inset-0 bg-black/50" />
 
         {/* Text Content - Bottom Left */}
-        <div className="absolute bottom-20 left-4 md:bottom-32 md:left-12 lg:left-20 text-center md:text-left max-w-2xl">
+        <div className="absolute bottom-20 left-4 md:bottom-32 md:left-12 lg:left-20 2xl:left-50 text-center md:text-left max-w-2xl">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-ultrabold text-white uppercase leading-none mb-4">
             Become a Partner and Grow Your Business
           </h1>
@@ -26,7 +26,7 @@ export default function PartnerHero() {
         </div>
 
         {/* Registration Form - Desktop Only (Overlay) */}
-        <div className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 md:right-12 lg:right-20 w-[90%] max-w-md">
+        <div className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 md:right-12 lg:right-20 2xl:right-50  w-[90%] max-w-md">
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10">
             <h2 className="text-3xl font-bold text-violet mb-6 text-center">
               Register here
