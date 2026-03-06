@@ -9,7 +9,26 @@ export default function OSDetector() {
                       navigator.platform.indexOf("Win") !== -1;
 
     if (isWindows) {
-      document.documentElement.classList.add("os-windows");
+      const updateWindowsClass = () => {
+        const screenWidth = window.innerWidth;
+
+        // Remove all Windows classes first
+        document.documentElement.classList.remove("os-windows-laptop", "os-windows-desktop");
+
+        // Apply different classes based on screen size
+        if (screenWidth < 1920) {
+          // Smaller screens (laptops, smaller monitors)
+          document.documentElement.classList.add("os-windows-laptop");
+        } else {
+          // Larger screens (desktop monitors 1920px+)
+          document.documentElement.classList.add("os-windows-desktop");
+        }
+      };
+
+      updateWindowsClass();
+      window.addEventListener("resize", updateWindowsClass);
+
+      return () => window.removeEventListener("resize", updateWindowsClass);
     }
   }, []);
 

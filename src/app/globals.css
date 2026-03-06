@@ -36,8 +36,14 @@ body {
 }
 
 /* Windows OS specific scaling - make everything smaller */
-html.os-windows body {
-  zoom: 0.75; /* Zoom out to 75% - scales everything including images, icons, text, spacing */
+/* For Windows laptops and smaller screens (under 1920px) */
+html.os-windows-laptop body {
+  zoom: 0.8; /* Zoom out to 80% for smaller Windows screens */
+}
+
+/* For Windows desktop monitors (1920px and above) */
+html.os-windows-desktop body {
+  zoom: 0.9; /* Zoom out to 90% for larger Windows monitors */
 }
 
 @keyframes slide-up {
