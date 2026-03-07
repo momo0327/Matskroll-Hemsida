@@ -37,7 +37,9 @@ export default function Features() {
 
         {/* Section Header - Title on the left */}
         <div className="mb-16">
-          <h2 className="text-4xl sm:text-5xl font-black text-violet mb-12 uppercase">
+          <h2 className="text-4xl md:text-6xl font-black  text-violet mb-12 uppercase "
+          style={{ fontFamily: 'var(--font-novecento-ultrabold)', fontWeight: 900 }}
+          >
             New{" "}
             <span className="relative inline-block">
               Adventures
