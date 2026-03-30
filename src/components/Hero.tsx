@@ -37,7 +37,7 @@ export default function Hero() {
               className="text-md md:text-lg lg:text-2xl text-cream mb-10 max-w-xl"
               style={{ fontWeight: 510 }}
             >
-              Scroll and find new restaurants nearby, found one? Order directly in the app!
+              Doomscroll and find new delicious food nearby and order instantly in the app!
             </p>
 
             {/* CTA Buttons */}
