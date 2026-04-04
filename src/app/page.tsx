@@ -15,8 +15,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Features />
-      <Partner />
       <AppSection />
+      <Partner />
       <ComingSoon />
       {/* <Testimonials /> */}
       {/* <DualMarquee /> */}
